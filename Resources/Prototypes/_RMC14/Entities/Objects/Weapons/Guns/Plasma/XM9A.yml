@@ -18,8 +18,6 @@
     fireDelay: 3
     soundGunshot:
       path: /Audio/_RMC14/Weapons/Guns/Gunshots/gun_m4spr.ogg
-    
-
   - type: RMCWeaponAccuracy
     accuracyMultiplier: 1.25
     accuracyMultiplierUnwielded: 0.6
