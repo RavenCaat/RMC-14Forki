@@ -34,7 +34,6 @@
   - type: HitscanBatteryAmmoProvider
     proto: PlasmaBeam
     fireCost: 1000 
-
   - type: ItemSlots
     slots:
       gun_magazine:
@@ -47,7 +46,6 @@
           - RMCPowerCellHigh
           - RMCPowerCellSuper
           - RMCPowerCell
-
   - type: GunRequiresWield
   - type: AttachableHolder
     slots:
