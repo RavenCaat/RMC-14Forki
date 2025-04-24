@@ -1,5 +1,5 @@
 - type: entity
-  parent:  RMCPowerCell, CMBaseWeaponGun
+  parent:  [RMCPowerCell, CMBaseWeaponGun]
   name: XM9A Phased Plasma Pulse Rifle
   id: WeaponXM9A
   description: The XM9A Is an experimental directed energy weapon prototype which fires Super-heated beams of plasma. 
