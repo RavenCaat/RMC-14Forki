@@ -1,87 +1,16 @@
 - type: entity
-  parent:  [RMCPowerCell, CMBaseWeaponGun]
+  parent:  [RMCPowerCell,  RMCbasePlasmaweapon, CMBaseWeaponGun]
   name: XM9A Phased Plasma Pulse Rifle
   id: WeaponXM9A
   description: The XM9A Is an experimental directed energy weapon prototype which fires Super-heated beams of plasma. 
   components:
   - type: Sprite
-    sprite: _RMC14/Objects/Weapons/Guns/Rifles/m4spr/desert.rsi
+    sprite: _RMC14/Objects/Weapons/Guns/PlasmaGuns/XM9A/classic.rsi
     layers:
     - state: bolt-open
       map: [ "enum.GunVisualLayers.Base" ]
-    - sprite: _RMC14/Objects/Weapons/Guns/Attachments/barrel.rsi
   - type: Clothing
-    sprite: _RMC14/Objects/Weapons/Guns/Rifles/m4spr/desert.rsi
-  - type: Gun
-    baseFireRate: 0.334
-    selectedMode: SemiAuto
-    fireDelay: 3
-    soundGunshot:
-      path: /Audio/_RMC14/Weapons/Guns/Gunshots/gun_m4spr.ogg
-  - type: RMCWeaponAccuracy
-    accuracyMultiplier: 1.25
-    accuracyMultiplierUnwielded: 0.6
-  - type: RMCWeaponDamageFalloff
-    falloffMultiplier: 0
-  - type: WieldDelay
-    baseDelay: 0.2
-  - type: WieldableSpeedModifiers
-    base: 0.725
-    light: 1
-    medium: 1
-    heavy: 1
-  - type: ShootUseDelay
+    sprite: _RMC14/Objects/Weapons/Guns/PlasmaGuns/XM9A/classic.rsi
   - type: HitscanBatteryAmmoProvider
     proto: PlasmaBeam
-    fireCost: 1000 
-  - type: ItemSlots
-    slots:
-      gun_magazine:
-        name: PowerCellSlot
-        insertSound: /Audio/_RMC14/Weapons/Guns/Reload/l42_reload.ogg
-        ejectSound: /Audio/_RMC14/Weapons/Guns/Reload/l42_unload.ogg
-        priority: 2
-        whitelist:
-          tags:
-          - RMCPowerCellHigh
-          - RMCPowerCellSuper
-          - RMCPowerCell
-  - type: GunRequiresWield
-  - type: AttachableHolder
-    slots:
-      rmc-aslot-barrel:
-        whitelist:
-          tags:
-          - RMCAttachmentExtendedBarrel
-          - RMCAttachmentSuppressor
-          - RMCM5Bayonet
-      rmc-aslot-rail:
-        whitelist:
-          tags:
-          - RMCAttachmentMagneticHarness
-          - RMCAttachmentRailFlashlight
-          - RMCAttachmentS42xTelescopicMiniscope
-          - RMCAttachmentS5RedDotSight
-          - RMCAttachmentS6ReflexSight
-      rmc-aslot-underbarrel:
-        whitelist:
-          tags:
-          - RMCAttachmentAngledGrip
-          - RMCAttachmentBipod
-          - RMCAttachmentFlashlightGrip
-          - RMCAttachmentLaserSight
-          - RMCAttachmentVerticalGrip
-  - type: AttachableHolderVisuals
-  
-  
-
-- type: Tag
-  id: RMCPowerCellHigh
-
-- type: Tag
-  id: RMCPowerCellSuper
-
-- type: Tag
-  id: RMCPowerCell
-
-
+    fireCost: 62.5
