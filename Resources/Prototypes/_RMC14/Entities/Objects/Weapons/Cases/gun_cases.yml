@@ -403,3 +403,28 @@
     - id: RMCPacketGrenadeM74AGMSStarShellFilled
     - id: RMCPacketGrenadeM74AGMSHornetFilled
     - id: RMCPacketGrenadeBatonSlugHIRRFilled
+
+# Plasma Weapons
+# XM9A
+- type: entity
+  parent: RMCGunCaseBase
+  id: RMCXM9ACase
+  name: XM9A experimental weapon prototype case.
+  description: A gun case containing the XM9A Phased Plasma Pulse Rifle.  
+  components:
+  - type: Storage
+    maxItemSize: Huge
+    grid:
+    - 0,0,3,1
+    whitelist:
+      tags:
+      -  RMCPowerCell
+      -  WeaponXM9A
+      -  RMCPowerCellHigh
+      -  RMCAttachmentS42xTelescopicMiniscope
+  - type: StorageFill
+    contents:
+    - id: WeaponXM9A 
+    - id: RMCPowerCellHigh 
+      amount: 2
+    - id:  RMCAttachmentS42xTelescopicMiniscope

@@ -1,0 +1,16 @@
+- type: entity
+  parent:  [RMCPowerCell,  RMCbasePlasmaweapon, CMBaseWeaponGun]
+  name: XM9A Phased Plasma Pulse Rifle
+  id: WeaponXM9A
+  description: The XM9A Is an experimental directed energy weapon prototype which fires Super-heated beams of plasma. 
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Weapons/Guns/PlasmaGuns/XM9A/classic.rsi
+    layers:
+    - state: bolt-open
+      map: [ "enum.GunVisualLayers.Base" ]
+  - type: Clothing
+    sprite: _RMC14/Objects/Weapons/Guns/PlasmaGuns/XM9A/classic.rsi
+  - type: HitscanBatteryAmmoProvider
+    proto: PlasmaBeam
+    fireCost: 62.5
