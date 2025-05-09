@@ -11,6 +11,7 @@
       map: [ "enum.GunVisualLayers.Base" ]
   - type: Clothing
     sprite: _RMC14/Objects/Weapons/Guns/PlasmaGuns/XM9A/classic.rsi
+    slots: Back
   - type: Gun
     selectedMode: SemiAuto
     availableModes:
