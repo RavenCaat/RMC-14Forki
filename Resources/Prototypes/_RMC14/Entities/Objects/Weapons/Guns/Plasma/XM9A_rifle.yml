@@ -1,0 +1,117 @@
+- type: entity
+  parent:  [RMCPowerCell,CMBaseWeaponGun, RMCBaseAttachableHolder]
+  name: XM9A Phased Plasma Pulse Rifle
+  id: WeaponXM9A
+  description: The XM9A Is an experimental directed energy weapon prototype which fires Super-heated beams of plasma.
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Weapons/Guns/PlasmaGuns/XM9A/classic.rsi
+    layers:
+    - state: bolt-open
+      map: [ "enum.GunVisualLayers.Base" ]
+  - type: Clothing
+    sprite: _RMC14/Objects/Weapons/Guns/PlasmaGuns/XM9A/classic.rsi
+  - type: Gun
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+     path: /Audio/_RMC14/Weapons/Guns/Gunshots/gun_m4spr.ogg
+  - type: RMCSelectiveFire
+    baseFireModes:
+    - SemiAuto
+    baseFireRate: 0.3
+  - type: WieldDelay
+    baseDelay: 0.5
+  - type: UseDelayOnShoot
+    baseDelay: 3
+  - type: GunRequiresWield
+  - type: ContainerContainer
+    containers:
+    gun_magazine: !type:ContainerSlot { }
+  - type: PowerCellSlot
+    cellSlotId: cell_slot
+  - type: HitscanBatteryAmmoProvider
+    proto: PlasmaBeam
+    fireCost: 1000
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Cell_Slot
+        startingItem: RMCPowerCell
+        insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - PowerCell
+            - RMCPowerCell
+            - RMCPowerCellHigh
+            - RMCPowerCellSuper
+  - type: AttachableHolder
+    slots:
+       rmc-aslot-barrel:
+         whitelist:
+           tags:
+         # - RMCAttachmentExtendedBarrel
+         # - RMCAttachmentSuppressor
+         # - RMCM5Bayonet
+       rmc-aslot-rail:
+         whitelist:
+          tags:
+          - RMCAttachmentMagneticHarness
+          - RMCAttachmentRailFlashlight
+          - RMCAttachmentS42xTelescopicMiniscope
+          - RMCAttachmentS5RedDotSight
+          - RMCAttachmentS6ReflexSight
+       rmc-aslot-underbarrel:
+        whitelist:
+          tags:
+          - RMCAttachmentAngledGrip
+          - RMCAttachmentBipod
+          - RMCAttachmentFlashlightGrip
+          - RMCAttachmentLaserSight
+          - RMCAttachmentVerticalGrip
+
+
+- type: hitscan
+  parent: HitscanEffect
+  id: PlasmaBeam
+  damage:
+    types:
+      Heat: 60
+  muzzleFlash:
+    sprite: _RMC14/Objects/Weapons/Guns/Ammunition/Beams/PlasmaBeam.rsi
+    state: muzzlePlasma
+  travelFlash:
+    sprite: _RMC14/Objects/Weapons/Guns/Ammunition/Beams/PlasmaBeam.rsi
+    state: PlasmaBeam
+  impactFlash:
+    sprite: _RMC14/Objects/Weapons/Guns/Ammunition/Beams/PlasmaBeam.rsi
+    state: ImpactPlasma
+
+
+- type: entity
+  parent: RMCGunCaseBase
+  id: RMCXM9ACase
+  name: XM9A experimental weapon prototype case
+  description: A gun case containing the XM9A Phased Plasma Pulse Rifle.
+  components:
+  - type: Storage
+    maxItemSize: Ginormous
+    grid:
+    - 0,0,3,1
+    whitelist:
+      tags:
+      -  RMCPowerCell
+      -  WeaponXM9A
+      -  RMCPowerCellHigh
+      -  RMCAttachmentS42xTelescopicMiniscope
+  - type: StorageFill
+    contents:
+    - id: WeaponXM9A
+    - id: RMCPowerCellHigh
+      amount: 2
+    - id:  RMCAttachmentS42xTelescopicMiniscope
+
+
